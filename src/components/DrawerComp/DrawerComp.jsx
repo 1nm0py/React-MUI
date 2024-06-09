@@ -20,6 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import BasicButtons from '../ButtonComp/BtnComp';
 import CardComp from '../CardComp/CardComp'
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -130,7 +131,7 @@ export default function MiniDrawer() {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    {['Inbox', 'Starred', 'Send email', 'Drafts' ].map((text, index)  => (
                         <ListItem key={text} disablePadding sx={{ display: 'block' }}>
                             <ListItemButton
                                 sx={{
@@ -152,6 +153,7 @@ export default function MiniDrawer() {
                             </ListItemButton>
                         </ListItem>
                     ))}
+
                 </List>
                 <Divider />
                 <List>
@@ -210,8 +212,7 @@ export default function MiniDrawer() {
                 </Typography>
 
                 <BasicButtons />
-                <div className="AllCard" style={{display: "flex", justifyContent: "space-between", marginTop: "50px"} }>
-                    <CardComp />
+                <div className="AllCard" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
                     <CardComp />
                     <CardComp />
                     <CardComp />
